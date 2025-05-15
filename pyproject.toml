@@ -5,8 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "boto3>=1.38.16",
+    "docling>=2.32.0",
+    "python-dotenv>=1.1.0",
     "ruff>=0.11.9",
 ]
 
 [project.scripts]
 raghunter = "raghunter.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["raghunter*"]
