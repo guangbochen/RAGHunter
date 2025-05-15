@@ -11,10 +11,10 @@
 
 2. **Tasks**:
 
+   * [x] Integrate PDF/Word document parsing
+   * [x] Introduce an OCR detection and correction pipeline
    * [ ] Design and review "field-level data quality standards" (referencing *Great Expectations*)
    * [ ] Implement an automatic completion module for missing values in structured data (using Pandas + Pydantic)
-   * [ ] Integrate PDF/Word document parsing
-   * [ ] Introduce an OCR detection and correction pipeline
    * [ ] Write unit tests with coverage ≥ 80%
    * [ ] Deploy to the development environment, run a smoke test: input sample data → output validated and completed data
 

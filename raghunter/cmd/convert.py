@@ -19,6 +19,9 @@ def setup_convert_cmd(subparsers):
     convert_parser.add_argument(
         "--backend", type=str, help="Specify the converter backend", default="docling", choices=["docling"]
     )
+    convert_parser.add_argument(
+        "--worker", type=int, help="Number of workers", default=3
+    )
     convert_parser.add_argument("--debug", action="store_true", help="Enable debug mode")
     convert_parser.add_argument("--use-s3", action="store_true", help="Enable S3 support for input")
     convert_parser.add_argument("--save-to-s3", action="store_true", help="Save output to S3")
