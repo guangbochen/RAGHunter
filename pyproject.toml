@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.38.16",
     "docling>=2.32.0",
+    "magic-pdf>=1.2.2",
     "python-dotenv>=1.1.0",
     "ruff>=0.11.9",
 ]

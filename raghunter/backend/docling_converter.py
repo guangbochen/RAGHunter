@@ -1,5 +1,6 @@
 import os
 import json
+import enum
 from .document_converter_interface import DocumentConverterInterface
 
 from docling.datamodel.base_models import InputFormat
@@ -9,6 +10,7 @@ from docling.datamodel.pipeline_options import (
     PdfPipelineOptions,
 )
 from docling.document_converter import DocumentConverter, PdfFormatOption
+from .mineru_converter import MineruConverter
 
 class DoclingConverter(DocumentConverterInterface):
     """Backend class for handling document conversion operations."""

@@ -24,3 +24,19 @@ class DocumentConverterInterface(ABC):
             output_dir: The output directory path
         """
         pass
+
+
+class BackendType(enum):
+    DOCLING = 'docling'
+    MINERU = 'mineru'
+
+
+class ConverterFactory:
+    @staticmethod
+    def get_converter(backend_type: BackendType) -> DocumentConverterInterface:
+        if backend_type == BackendType.DOCLING:
+            return DoclingConverter()
+        elif backend_type == BackendType.MINERU:
+            return MineruConverter()
+        else:
+            raise ValueError(f"Unsupported backend type: {backend_type}")

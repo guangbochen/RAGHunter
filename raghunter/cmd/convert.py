@@ -17,7 +17,7 @@ def setup_convert_cmd(subparsers):
         "--output", type=str, help="Specify the output directory", default="output"
     )
     convert_parser.add_argument(
-        "--backend", type=str, help="Specify the converter backend", default="docling", choices=["docling"]
+        "--backend", type=str, help="Specify the converter backend", default="docling", choices=["docling", "mineru"]
     )
     convert_parser.add_argument(
         "--worker", type=int, help="Number of workers", default=3
@@ -35,6 +35,8 @@ def handle(args):
 
     if args.backend == "docling":
         converter = DoclingConverter()
+    elif args.backend == "mineru":
+        converter = MineruConverter()
     else:
         raise ValueError(f"Unsupported backend: {args.backend}")
 
